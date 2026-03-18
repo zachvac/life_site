@@ -14,4 +14,4 @@ COPY * ./app/
 
 RUN echo "hello world"
 
-CMD ["bash"]
+# CMD ["bash"]
