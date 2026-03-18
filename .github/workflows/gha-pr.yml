@@ -18,4 +18,4 @@ jobs:
 
       - name: Run Docker Command
         run: |
-          docker run my-app-image
+          docker run my-app-image ls
