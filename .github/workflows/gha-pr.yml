@@ -1,0 +1,21 @@
+name: Docker PR Check
+
+on:
+  pull_request:
+    branches: [ "main" ] # Triggers when a PR is targeted at main
+    types: [opened, synchronize, reopened]
+
+jobs:
+  docker-run:
+    runs-on: ubuntu-latest # Use an Ubuntu runner (includes Docker by default)
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4 # Essential to access your Dockerfile and code
+
+      - name: Build Docker Image
+        run: docker build -t my-app-image . # Builds the image from your Dockerfile
+
+      - name: Run Docker Command
+        run: |
+          docker run my-app-image

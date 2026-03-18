@@ -12,4 +12,6 @@ RUN mkdir -p /app
 
 COPY * ./app/
 
+RUN echo "hello world"
+
 CMD ["bash"]
