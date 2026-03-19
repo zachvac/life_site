@@ -1,6 +1,7 @@
 FROM python:3.11-slim
 
 ENV DEBIAN_FRONTEND=noninteractive
+ENV FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends ca-certificates curl \
